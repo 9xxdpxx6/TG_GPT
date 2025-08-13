@@ -177,11 +177,19 @@ secrets.json
 checkpoint-*/
 results/
 
-# Dataset files (can be large)
-*.json
-!requirements.txt
-!README.md
-!*.py
+# Large dataset files (exclude specific large files, keep important configs)
+dataset/2025_08_12/*.json
+dataset/my_dialogpt/model.safetensors
+dataset/my_dialogpt/training_args.bin
+dataset/results/
+
+# Keep important JSON files
+!dataset/dataset_statistics.json
+!dataset/my_dialogpt/config.json
+!dataset/my_dialogpt/generation_config.json
+!dataset/my_dialogpt/special_tokens_map.json
+!dataset/my_dialogpt/tokenizer_config.json
+!dataset/my_dialogpt/vocab.json
 
 # Logs
 *.log
